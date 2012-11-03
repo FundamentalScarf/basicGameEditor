@@ -1,0 +1,14 @@
+package se.birdey.basicGameEditor;
+
+public class BasicGameEditor {
+	public static void main(String[] args) {
+		
+		try{
+			LibrarySetup lib = new LibrarySetup;
+		}catch(Exception e){
+			e.printStackTrace();
+			System.out.println("Sorry :(");
+		}
+		
+	}
+}

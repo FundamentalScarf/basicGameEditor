@@ -1,0 +1,19 @@
+package se.birdey.basicGameEditor;
+
+public class LibrarySetup {
+	public static void loadNativeLibraries() throws Exception{
+		if(System.getProperty("os.name").equals("Mac OS X")){
+			addNativesPath("native/macosx");
+		}else if(System.getProperty("os.name").equals("Linux")){
+			addNativesPath("native/linux");
+		}else if(System.getProperty("os.name").equals("Windows")){
+			addNativesPath("native/windows");			
+		}else if(System.getProperty("os.name").equals("Solaris")){
+			addNativesPath("native/solaris");
+		}
+	}
+	private static void addNativesPath(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+}

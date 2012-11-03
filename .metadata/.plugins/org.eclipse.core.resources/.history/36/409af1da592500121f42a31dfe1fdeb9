@@ -1,0 +1,7 @@
+package se.birdey.basicGameEditor;
+
+public class LibrarySetup {
+	public static void loadNativeLibraries() throws Exception{
+		
+	}
+}
