@@ -1,0 +1,30 @@
+package se.birdey.basicGameEditor;
+
+import java.lang.reflect.Field;
+
+public class LibrarySetup {
+	public static void loadNativeLibraries() throws Exception{
+		if(System.getProperty("os.name").equals("Mac OS X")){
+			addNativesPath("native/macosx");
+		}else if(System.getProperty("os.name").equals("Linux")){
+			addNativesPath("native/linux");
+		}else if(System.getProperty("os.name").equals("Windows")){
+			if (System.getProperty("os.arch").equals("amd64") || System.getProperty("os.arch").equals("x86_64")){
+				System.loadLibrary("OpenAL64");
+			}else {
+				System.loadLibrary("OpenAL32");
+			}			
+		}else if(System.getProperty("os.name").equals("Solaris")){
+			addNativesPath("native/solaris");
+		}else {
+			System.exit(1);
+		}
+	}
+	
+	
+	private static void addNativesPath(String string) throws Exception {
+		final Field user_paths_field = ClassLoader.class.getDeclaredField("usr_paths");
+		user_paths_field.setAccessible(true);
+		final String[] paths = (String[]) user_paths_field.get(null);
+	}
+}

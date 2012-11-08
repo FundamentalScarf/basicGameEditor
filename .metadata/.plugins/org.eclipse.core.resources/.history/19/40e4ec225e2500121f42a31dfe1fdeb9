@@ -1,0 +1,14 @@
+import se.birdey.basicGameEditor.LibrarySetup;
+
+public class BasicGameEditor {
+	public static void main(String[] args) {
+		
+		try{
+			LibrarySetup.loadNativeLibraries();
+		}catch(Exception e){
+			e.printStackTrace();
+			System.out.println("Sorry :(");
+		}
+		
+	}
+}
