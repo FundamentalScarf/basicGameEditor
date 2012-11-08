@@ -1,0 +1,13 @@
+package se.birdey.basicGameEditor;
+
+public class BasicGameEditor {
+	public static void main(String[] args) {
+		
+		try{
+			
+		}catch(Exception e){
+			
+		}
+		
+	}
+}
